@@ -10,7 +10,7 @@ class Categoria(models.Model):
     modified = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.name
+        return self.nombre
 
 
 class Noticia(models.Model):
@@ -22,7 +22,7 @@ class Noticia(models.Model):
     modified = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.name
+        return self.titular
 
 
 # Create your models here.
