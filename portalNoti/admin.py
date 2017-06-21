@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from Noticias.models import Noticia, Categoria
+from portalNoti.models import Noticia, Categoria
 
 class NoticiaAdmin (admin.ModelAdmin):
 	list_display = ('id','titular','categoria')
