@@ -20,6 +20,7 @@ class Noticia(models.Model):
     sort_order = models.IntegerField()
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+    imagen = models.ImageField(upload_to='photos')
 
     def __str__(self):
         return self.titular

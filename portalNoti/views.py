@@ -12,7 +12,7 @@ from django.urls import reverse
 
 def noticia_list(request):
     data = {}
-    data['object_list'] = Noticia.objects.all().order_by('created_date')
+    data['object_list'] = Noticia.objects.all().order_by('created')
 
-    template_name = 'portalNoti/index.html'
+    template_name = 'index.html'
     return render(request, template_name, data)
