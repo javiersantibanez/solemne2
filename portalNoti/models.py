@@ -18,6 +18,7 @@ class Noticia(models.Model):
     categoria = models.ForeignKey(Categoria)
     description = models.TextField()
     sort_order = models.IntegerField()
+    destacada = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     imagen = models.ImageField(upload_to='photos')
