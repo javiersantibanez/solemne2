@@ -5,7 +5,6 @@ from django.db import models
 
 class Categoria(models.Model):
     nombre = models.CharField(max_length=140)
-    sort_order = models.IntegerField()
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
@@ -17,7 +16,7 @@ class Noticia(models.Model):
     titular = models.CharField(max_length=140)
     categoria = models.ForeignKey(Categoria)
     description = models.TextField()
-    sort_order = models.IntegerField()
+    destacada = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     imagen = models.ImageField(upload_to='photos')
